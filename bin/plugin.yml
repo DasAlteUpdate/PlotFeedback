@@ -1,0 +1,1 @@
+name: PlotFeedbackmain: me.dasneueupdate.plotfeedback.Mainversion: 1.0author: DasNeueUpdatedepend: [PlotSquared]permissions:  plotfeedback.use:    default: op

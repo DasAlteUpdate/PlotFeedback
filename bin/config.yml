@@ -1,0 +1,10 @@
+backgroundid: 160
+backgrounddurability: 7
+noplotfound: &cDu befindest dich auf keinem Plot!
+guititle: &aBewerten
+seletectedpointdurability: 10
+unseletectedpointdurability: 8
+seletectedpointid: 351
+unseletectedpointid: 351
+selectedcolor: a
+unselectedcolor: 7

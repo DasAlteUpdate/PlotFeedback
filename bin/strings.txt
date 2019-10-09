@@ -1,0 +1,39 @@
+//name,lore,id,amount,damage,x,y,type
+test1,lore1:lore_1,330,1,0,0,0,NOTHING
+test2,lore2:lore_2,58,1,0,0,1,NOTHING
+test3,lore3:lore_3,37,1,0,0,2,NOTHING
+test4,lore4:lore_4,399,1,0,0,3,NOTHING
+test5,lore5:lore_5,137,1,0,0,4,NOTHING
+//
+&aBewerten,,251,1,5,3,5,CONFIRM
+&4Abbrechen,,251,1,14,5,5,CANCEL
+//
+&a1 Punkt,,351,1,10,2,0,POINT
+&a1 Punkt,,351,1,10,2,1,POINT
+&a1 Punkt,,351,1,10,2,2,POINT
+&a1 Punkt,,351,1,10,2,3,POINT
+&a1 Punkt,,351,1,10,2,4,POINT
+//             
+&72 Punkte,,351,2,8,3,0,POINT
+&72 Punkte,,351,2,8,3,1,POINT
+&72 Punkte,,351,2,8,3,2,POINT
+&72 Punkte,,351,2,8,3,3,POINT
+&72 Punkte,,351,2,8,3,4,POINT
+//             
+&73 Punkte,,351,3,8,4,0,POINT
+&73 Punkte,,351,3,8,4,1,POINT
+&73 Punkte,,351,3,8,4,2,POINT
+&73 Punkte,,351,3,8,4,3,POINT
+&73 Punkte,,351,3,8,4,4,POINT
+//             
+&74 Punkte,,351,4,8,5,0,POINT
+&74 Punkte,,351,4,8,5,1,POINT
+&74 Punkte,,351,4,8,5,2,POINT
+&74 Punkte,,351,4,8,5,3,POINT
+&74 Punkte,,351,4,8,5,4,POINT
+//             
+&75 Punkte,,351,5,8,6,0,POINT
+&75 Punkte,,351,5,8,6,1,POINT
+&75 Punkte,,351,5,8,6,2,POINT
+&75 Punkte,,351,5,8,6,3,POINT
+&75 Punkte,,351,5,8,6,4,POINT

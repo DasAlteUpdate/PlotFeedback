@@ -1,0 +1,4 @@
+Bewertet von
+&c%player
+-*-
+&c%points/25

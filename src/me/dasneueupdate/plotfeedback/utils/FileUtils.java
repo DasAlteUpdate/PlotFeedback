@@ -34,7 +34,6 @@ public final class FileUtils
             }
         }
         catch (IOException ex) {
-            ex.printStackTrace();
         }
         final String[] linesArray = lines.stream().toArray(new IntFunction<String[]>() {
             @Override
@@ -72,8 +71,6 @@ public final class FileUtils
         try {
 			in.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
         return array;
     }

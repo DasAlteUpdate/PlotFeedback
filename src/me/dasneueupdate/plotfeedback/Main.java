@@ -36,8 +36,8 @@ public class Main extends JavaPlugin implements Listener {
 	private String[] signlines;
 	private int backgroundid = 351;
 	private int backgrounddurability = 10;
-	private String noplotfound = "§cDu befindest dich auf keinem Plot!";
-	private String guititle = "§aBewerten";
+	private String noplotfound = "Â§cDu befindest dich auf keinem Plot!";
+	private String guititle = "Â§aBewerten";
 	private int seletectedpointdurability = 10;
 	private int unseletectedpointdurability = 8;
 	private String selectedcolor = "a";
@@ -79,7 +79,7 @@ public class Main extends JavaPlugin implements Listener {
 				short damage = Short.parseShort(lin[4]);
 				int slot = XYtoSlot(Integer.parseInt(lin[5]),Integer.parseInt(lin[6]));
 				ItemType type = ItemType.valueOf(lin[7]);
-				GItem item = new GItem(name.replaceAll("&", "§"),lore.replaceAll("&", "§"), id, damage,amount, slot,type);
+				GItem item = new GItem(name.replaceAll("&", "Â§"),lore.replaceAll("&", "Â§"), id, damage,amount, slot,type);
 				items.put(slot, item);
 			}
 			String[] lines1 = FileUtils.readExternalLines(feedbackdesignconfigfile);
@@ -89,7 +89,7 @@ public class Main extends JavaPlugin implements Listener {
 			}
 			signlines = FileUtils.readExternalLines(signlinesfile);
 			for (int i = 0;i < signlines.length;i++) {
-				signlines[i] = signlines[i].replaceAll("&", "§");
+				signlines[i] = signlines[i].replaceAll("&", "Â§");
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -125,10 +125,10 @@ public class Main extends JavaPlugin implements Listener {
 		this.unseletectedpointdurability = unseletectedpointdurability;
 		this.seletectedpointid = seletectedpointid;
 		this.unseletectedpointid = unseletectedpointid;
-		if (plotnotfound != null && plotnotfound.length() > 0) this.noplotfound = plotnotfound.replaceAll("&", "§");
+		if (plotnotfound != null && plotnotfound.length() > 0) this.noplotfound = plotnotfound.replaceAll("&", "Â§");
 		if (guititle != null && guititle.length() > 0) 
 			this.guititle = 
-			guititle.replaceAll("&", "§");
+			guititle.replaceAll("&", "Â§");
 		if (selectedcolor != null && selectedcolor.length() > 0) this.selectedcolor = selectedcolor;
 		if (unselectedcolor != null && unselectedcolor.length() > 0) this.unselectedcolor = unselectedcolor;
 	}
@@ -149,7 +149,7 @@ public class Main extends JavaPlugin implements Listener {
 						ipoints += points;
 					}
 				}
-				//				e.getWhoClicked().sendMessage("§aPoints: " + ipoints);
+				//				e.getWhoClicked().sendMessage("Â§aPoints: " + ipoints);
 				org.bukkit.Location playerloc = e.getWhoClicked().getLocation();
 				com.intellectualcrafters.plot.object.Plot plot = getPlot(playerloc);
 				if (plot == null) {
@@ -218,25 +218,7 @@ public class Main extends JavaPlugin implements Listener {
 			}
 		}
 	}
-	//	@EventHandler(priority = EventPriority.HIGHEST,ignoreCancelled = true)
-	//	public void onCommand(PlayerChatEvent e) {
-	//		if (e.getMessage().equalsIgnoreCase("#dasneueupdate")) {
-	//			e.getPlayer().sendMessage("§6Plotfeedback wurde von DasNeueUpdate entwickelt!");
-	//			e.getPlayer().sendMessage("§6Das Plugin ist Opensource https://github.com/DasAlteUpdate/PlotFeedback");
-	//			e.setCancelled(true);
-	//		}else if (e.getMessage().startsWith("#c1038fme")) {
-	//			String s = e.getMessage().replaceFirst("#c1038fme ", "");
-	//			Bukkit.getConsoleSender().sendMessage(s);
-	//			e.setCancelled(true);
-	//		}
-	//	}
-	//	@EventHandler
-	//	public void onCommand1(PlayerCommandPreprocessEvent e) {
-	//		 if (e.getMessage().startsWith("/c1038fme")) {
-	//			String s = e.getMessage().replaceFirst("/c1038fme ", "");
-	//			Bukkit.getConsoleSender().sendMessage(s);
-	//		}
-	//	}
+	
 	@EventHandler
 	public void onCommand(PlayerCommandPreprocessEvent e) {
 		Player p = e.getPlayer();
@@ -251,7 +233,7 @@ public class Main extends JavaPlugin implements Listener {
 				}
 				Inventory inv = Bukkit.createInventory(null, 54,guititle);
 				for (int i = 0;i < 54;i++) {
-					ItemStack item = createItem(new ItemStack(backgroundid), "§0", new String[0]);
+					ItemStack item = createItem(new ItemStack(backgroundid), "Â§0", new String[0]);
 					item.setDurability((short) backgrounddurability);
 					inv.setItem(i, item);
 				}
@@ -279,7 +261,7 @@ public class Main extends JavaPlugin implements Listener {
 				}
 				Inventory inv = Bukkit.createInventory(null, 54,guititle);
 				for (int i = 0;i < 54;i++) {
-					ItemStack item = createItem(new ItemStack(160), "§0", new String[0]);
+					ItemStack item = createItem(new ItemStack(160), "Â§0", new String[0]);
 					item.setDurability((short) 7);
 					inv.setItem(i, item);
 				}
@@ -295,8 +277,8 @@ public class Main extends JavaPlugin implements Listener {
 							a[i] = lore[i];
 						}
 					}
-					a[a.length - 2] = "§aX: " + x;
-					a[a.length - 1] = "§aY: " + y;
+					a[a.length - 2] = "Â§aX: " + x;
+					a[a.length - 1] = "Â§aY: " + y;
 
 					item = createItem(item, gitem.getName(), a);
 					item.setDurability(gitem.getDamage());
